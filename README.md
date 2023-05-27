@@ -32,7 +32,7 @@ The first model identified more false positives than positives at a threshold of
 
 Within the next few trials were attempts to identify multiple labels for poker chips such as stack of chips, bundle of chips and single chip but too many false positives appeared. The final model was trained on overall pokerchips, single bundle, stacks and piles. <br /><br />
 
-Overall the final model is not the optimal output but performs well to identify the majority of the chips from certain angles. <br />
+Overall the final model is not the optimal output but performs well to identify the majority of the chips from certain angles and different colors. <br />
 
 ## Dependencies: 
 
