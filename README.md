@@ -14,9 +14,6 @@
 Tensorflow <br /> 
 YoloV5 <br />
 
- ### Model Development: 
-
-
  ### Training: 
  training is performed at 130 epochs. <br />
  training 130 epochs with 300 images took about an hour<br />
@@ -24,6 +21,8 @@ YoloV5 <br />
  No specific reason for 130 epochs besides making sure there was enough training  <br />
 
 ## Evaluation:
+![alt text](http://url/to/img.png)
+
 
 ## Overview:
 The object detection model (YoloV5) performs extremely well. After a 4 or 5 iterations of training the model detects most cases of poker chips <br /><br />
@@ -35,9 +34,40 @@ Within the next few trials were attempts to identify multiple labels for poker c
 Overall the final model is not the optimal output but performs well to identify the majority of the chips from certain angles and different colors. <br />
 
 ## Dependencies: 
+    - pip install pytube
+    - pip install requests
+    - pip install opencv-python
+    - pip install lxml
+    - pip install PyQt5
+    - pip install ultralytics
 
 
-## Installation Instructions: 
+
+## Installation Instructions:
+- git clone https://github.com/Jpaku93/PokerChipDetection-YoloV5.git
+- cd PokerChipDetection-YoloV5
+- python -m venv env
+- ./env/Scripts/activate
+- python -m pip install --upgrade pip
+- install dependencies
+- copy image or video url to url_image.txt or url_video.txt
+- git clone https://github.com/heartexlabs/labelImg.git
+- cd labelImg
+- pyrcc5 -o libs/resources.py resources.qrc
+- python labelImg.py
+- click open dir # open image folder (data/images)
+- click the box containing (createML, Pascal<Voc>, yolo) to save as yolo format 
+- annotate images and label data
+- python prepare_data.py
+- git clone https://github.com/ultralytics/yolov5  # clone
+- cd yolov5
+- pip install -r requirements.txt
+- move dataset.yaml to yolov5
+- python train.py --img 415 --batch 16 --epochs 30 --data dataset.yaml --weights yolov5s.pt --cache
+- At the end of the training, two files should be saved in yolov5/runs/train/exp/weights: last.pt and best.pt. We’ll use best.pt.
+- python -c "import matplotlib.pyplot as plt; import matplotlib.image as mpimg; image = mpimg.imread('runs/train/exp2/val_batch0_pred.jpg'); plt.imshow(image); plt.axis('off'); plt.show()" # ensure the exp[number] and [image] path is correct  
+- python detect.py --source runs/train/exp2/a.jpg --weights best.pt
+- python -c "import matplotlib.pyplot as plt; import matplotlib.image as mpimg; image = mpimg.imread('runs/detect/exp4/a.jpg'); plt.imshow(image); plt.axis('off'); plt.show()"
 
 ## Usage Guide: 
 
