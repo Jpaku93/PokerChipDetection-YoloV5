@@ -21,7 +21,7 @@ YoloV5 <br />
  No specific reason for 130 epochs besides making sure there was enough training  <br />
 
 ## Evaluation:
-![alt text](http://url/to/img.png)
+![http://url/to/img.png](https://github.com/Jpaku93/PokerChipDetection-YoloV5/blob/main/sample_img.png)
 
 
 ## Overview:
