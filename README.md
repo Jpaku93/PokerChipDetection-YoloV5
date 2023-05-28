@@ -10,6 +10,7 @@
  The annotations are stored into yolo format .txt file for each corresponding image, then organised into a dataset folder containing train and valid files with seperate annotation and image files. <br />   
 
  ### Framework:
+openCV <br />
 Tensorflow <br /> 
 YoloV5 <br />
 
