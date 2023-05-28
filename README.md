@@ -3,7 +3,6 @@
  ### The Problem:
  The original idea is to count or track the number of chips assigned to a player, Reasons for a system would lead to tracking fraud chips, data collection and analysis of player behaviour and automatic chip counting systems using a mix of computer vision, count of chips on the table and per person.
  <br/>
- Research reference: https://patents.google.com/patent/US5781647A/en
 
  ### Data Collection and Preparation: 
  Images are collected from youtube video and image urls.  <br />
@@ -35,12 +34,12 @@ Within the next few trials were attempts to identify multiple labels for poker c
 Overall the final model is not the optimal output but performs well to identify the majority of the chips from certain angles and different colors. <br />
 
 ## Dependencies: 
-    - pip install pytube
-    - pip install requests
-    - pip install opencv-python
-    - pip install lxml
-    - pip install PyQt5
-    - pip install ultralytics
+    pip install pytube
+    pip install requests
+    pip install opencv-python
+    pip install lxml
+    pip install PyQt5
+    pip install ultralytics
 
 
 
@@ -69,9 +68,18 @@ Overall the final model is not the optimal output but performs well to identify 
 - python -c "import matplotlib.pyplot as plt; import matplotlib.image as mpimg; image = mpimg.imread('runs/train/exp2/val_batch0_pred.jpg'); plt.imshow(image); plt.axis('off'); plt.show()" # ensure the exp[number] and [image] path is correct  
 - python detect.py --source runs/train/exp2/a.jpg --weights best.pt
 - python -c "import matplotlib.pyplot as plt; import matplotlib.image as mpimg; image = mpimg.imread('runs/detect/exp4/a.jpg'); plt.imshow(image); plt.axis('off'); plt.show()"
-
-## Usage Guide: 
-
-## Configuration: 
+ 
+## References:
+ repo ref: 
+ - https://github.com/heartexlabs/labelImg.git
+ - https://github.com/ultralytics/yolov5 
+ - https://github.com/AarohiSingla/yolov5/blob/main/yolov5ontrafficsigndetection.ipynb
+ Research ref: https://patents.google.com/patent/US5781647A/en
 
 ## Continuous Improvement: 
+ For now this work is baseline yolo object detection, <br />
+ chip counting is complex for computer vision due to occlusion. <br />
+ The research reference confirms my idea of data integrated references for weighted summary of players total chips. <br />
+ sub classes might do better at robust precision detection such as considering all the chips on the table OR, <br />
+ computer vision is better suited for sub task such as game monitoring and fraud chip detection.
+ 
