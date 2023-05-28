@@ -73,7 +73,7 @@ Overall the final model is not the optimal output but performs well to identify 
  repo ref: 
  - https://github.com/heartexlabs/labelImg.git
  - https://github.com/ultralytics/yolov5 
- - https://github.com/AarohiSingla/yolov5/blob/main/yolov5ontrafficsigndetection.ipynb
+ - https://github.com/AarohiSingla/yolov5/blob/main/yolov5ontrafficsigndetection.ipynb <br />
  Research ref: https://patents.google.com/patent/US5781647A/en
 
 ## Continuous Improvement: 
