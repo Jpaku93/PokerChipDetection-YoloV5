@@ -20,7 +20,7 @@ YoloV5 <br />
  No specific reason for 130 epochs besides making sure there was enough training  <br />
 
 ## Evaluation:
-Graphs and training metrics are provided, in this case most of the evaluation was observed by the live performance of video testing.
+Graphs and training metrics are provided, in this case most of the evaluation was observed by the live performance of video testing. Metrics of the bounding box contents and dimension are included in the training. 
 ![http://url/to/img.png](https://github.com/Jpaku93/PokerChipDetection-YoloV5/blob/main/sample_img.png)
 
 
